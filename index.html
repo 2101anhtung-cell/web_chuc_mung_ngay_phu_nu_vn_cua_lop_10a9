@@ -1,0 +1,472 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#2c1a47">
+    <meta name="description" content="Lời chúc mừng Ngày Phụ nữ Việt Nam 20/10 gửi đến các bạn nữ lớp 10A9 từ Gia Bảo.">
+
+    <title>💐 Chúc mừng 20/10 | Lớp 10A9</title>
+
+    <style>
+        /* =========================
+           1. THIẾT LẬP CHUNG
+        ========================= */
+        :root {
+            --pink: #ffb6c9;
+            --light-pink: #ffe4ec;
+            --purple: #2c1a47;
+            --white: #ffffff;
+            --text: #fce4ec;
+            --glass: rgba(255, 255, 255, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 40px 18px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            text-align: center;
+            color: var(--white);
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(153, 78, 179, 0.22),
+                    transparent 40%
+                ),
+                linear-gradient(
+                    180deg,
+                    #2c1a47 0%,
+                    #1a1a2e 55%,
+                    #0f172a 100%
+                );
+        }
+
+        /* =========================
+           2. HIỆU ỨNG TRANG TRÍ
+        ========================= */
+        .stars {
+            margin-bottom: 18px;
+            font-size: 22px;
+            letter-spacing: 8px;
+            color: #ffe0ef;
+            opacity: 0.85;
+            animation: twinkle 2s ease-in-out infinite alternate;
+        }
+
+        .flower-icon {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-size: 64px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(-4deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(4deg);
+            }
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: 0.45;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           3. TIÊU ĐỀ
+        ========================= */
+        h1 {
+            max-width: 800px;
+            margin: 0 auto 14px;
+            font-size: clamp(1.65rem, 5vw, 2.5rem);
+            line-height: 1.35;
+            background: linear-gradient(
+                90deg,
+                #ff9a9e,
+                #fad0c4,
+                #ffecd2
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .date {
+            margin-bottom: 32px;
+            color: var(--pink);
+            font-size: clamp(1rem, 3.5vw, 1.45rem);
+            font-weight: 600;
+            letter-spacing: 4px;
+        }
+
+        /* =========================
+           4. THIỆP CHÚC MỪNG
+        ========================= */
+        .card {
+            width: 100%;
+            max-width: 620px;
+            margin: 0 auto;
+            padding: clamp(22px, 5vw, 40px);
+            border: 1px solid rgba(255, 182, 201, 0.24);
+            border-radius: 28px;
+            background: var(--glass);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            text-align: left;
+            animation: appear 1s ease both;
+        }
+
+        .greeting {
+            margin-bottom: 18px;
+            color: #ffd4e3;
+            font-size: 1.12rem;
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
+        .message {
+            color: var(--text);
+            font-size: 1.02rem;
+            line-height: 1.95;
+            overflow-wrap: break-word;
+        }
+
+        .message p {
+            margin-bottom: 18px;
+        }
+
+        .message p:last-child {
+            margin-bottom: 0;
+        }
+
+        .divider {
+            margin: 18px 0 22px;
+            color: var(--pink);
+            font-size: 1.3rem;
+            text-align: center;
+            letter-spacing: 8px;
+        }
+
+        .highlight {
+            color: #ffd0e1;
+            font-weight: 600;
+        }
+
+        /* =========================
+           5. LỜI KÝ TÊN
+        ========================= */
+        .center {
+            margin-top: 28px;
+            text-align: center;
+        }
+
+        .signature {
+            display: inline-block;
+            max-width: 100%;
+            padding: 13px 24px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #e94057, #f27121);
+            box-shadow: 0 5px 22px rgba(233, 64, 87, 0.3);
+            color: white;
+            font-size: 0.98rem;
+            font-weight: 600;
+            line-height: 1.7;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .signature:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(233, 64, 87, 0.4);
+        }
+
+        /* =========================
+           6. HOA TRANG TRÍ
+        ========================= */
+        .flowers {
+            margin-top: 34px;
+            font-size: clamp(1.6rem, 5vw, 2rem);
+            letter-spacing: 5px;
+            opacity: 0.85;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .footer {
+            margin-top: 18px;
+            color: #d9c5e7;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        /* Các trái tim và cánh hoa do JavaScript tạo */
+        .particle {
+            position: fixed;
+            z-index: -1;
+            bottom: -40px;
+            pointer-events: none;
+            user-select: none;
+            animation: rise linear forwards;
+            will-change: transform, opacity;
+        }
+
+        @keyframes rise {
+            0% {
+                opacity: 0;
+                transform: translateY(0) rotate(0deg);
+            }
+
+            10% {
+                opacity: 0.8;
+            }
+
+            90% {
+                opacity: 0.65;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-115vh) rotate(35deg);
+            }
+        }
+
+        /* =========================
+           7. GIAO DIỆN ĐIỆN THOẠI
+        ========================= */
+        @media (max-width: 480px) {
+            body {
+                padding: 30px 14px;
+            }
+
+            .stars {
+                font-size: 18px;
+                letter-spacing: 5px;
+            }
+
+            .flower-icon {
+                font-size: 54px;
+            }
+
+            .date {
+                margin-bottom: 24px;
+                letter-spacing: 2px;
+            }
+
+            .card {
+                border-radius: 22px;
+            }
+
+            .message {
+                font-size: 0.98rem;
+                line-height: 1.85;
+            }
+
+            .signature {
+                padding: 12px 18px;
+                font-size: 0.9rem;
+            }
+
+            .flowers {
+                letter-spacing: 2px;
+            }
+        }
+
+        /* Hỗ trợ người dùng không thích chuyển động */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .particle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Phần mở đầu -->
+    <div class="stars" aria-hidden="true">
+        ✧ ✦ ✧ ✦ ✧ ✦ ✧
+    </div>
+
+    <div class="flower-icon" aria-hidden="true">🌷</div>
+
+    <h1>Chúc Mừng Ngày Phụ Nữ Việt Nam</h1>
+
+    <div class="date">
+        20 / 10 — LỚP 10A9 🌸
+    </div>
+
+    <!-- Nội dung thiệp -->
+    <main class="card">
+        <div class="greeting">
+            Chào tất cả các bạn nữ của lớp 10A9 thân yêu! ✨
+        </div>
+
+        <div class="divider" aria-hidden="true">
+            ✿ ❀ ✿
+        </div>
+
+        <div class="message">
+            <p>
+                Hôm nay là ngày 20/10 rồi! Tớ muốn gửi đến tất cả mọi người
+                những lời chúc thật chân thành. Tớ cảm thấy rất vui và may
+                mắn khi được học chung lớp với các bạn. Mỗi người đều có
+                nét đẹp và cá tính riêng, và chính điều đó đã làm cho
+                <span class="highlight">10A9 của chúng ta trở nên thật đặc biệt.</span>
+            </p>
+
+            <p>
+                Chúc các bạn luôn tươi cười mỗi ngày, vì nụ cười của mỗi
+                người đều rất đáng yêu! Đừng thay đổi bản thân chỉ để làm
+                hài lòng người khác nhé, bởi mỗi bạn đều có giá trị riêng.
+                Hãy luôn tự tin, yêu thương bản thân và tin vào những điều
+                tốt đẹp đang chờ phía trước.
+            </p>
+
+            <p>
+                Chúc các bạn học tập ngày càng tiến bộ, đạt được nhiều
+                điểm số cao và hoàn thành những mục tiêu của mình.
+                Nếu có lúc gặp khó khăn, đừng ngần ngại chia sẻ nhé,
+                vì chúng ta luôn có một tập thể để cùng nhau cố gắng,
+                giúp đỡ và tiến bộ.
+            </p>
+
+            <p>
+                Mong các bạn luôn mạnh khỏe, vui vẻ và có thật nhiều
+                niềm vui nhỏ bé nhưng ý nghĩa trong cuộc sống.
+                Cảm ơn các bạn đã góp phần làm cho những ngày đến trường
+                của tớ trở nên vui vẻ và đáng nhớ hơn.
+            </p>
+
+            <p>
+                Hy vọng chúng ta sẽ luôn đoàn kết, thân thiết và cùng nhau
+                tạo nên thật nhiều kỷ niệm đẹp trong suốt những năm tháng
+                cấp ba. Sau này khi nhìn lại, mong rằng ai cũng sẽ mỉm cười
+                khi nhớ về lớp 10A9 của chúng ta!
+            </p>
+
+            <p>
+                <span class="highlight">
+                    Chúc mừng ngày 20/10 đến tất cả các bạn nữ lớp 10A9!
+                </span>
+                Chúc mọi người luôn xinh đẹp, hạnh phúc, tự tin và gặp
+                thật nhiều may mắn. Yêu mọi người nhiều lắm! 💐💕
+            </p>
+        </div>
+
+        <div class="divider" aria-hidden="true">
+            ♡ ❀ ♡
+        </div>
+
+        <div class="center">
+            <div class="signature">
+                💌 Người gửi: Gia Bảo 💕
+            </div>
+        </div>
+    </main>
+
+    <!-- Hoa trang trí cuối trang -->
+    <div class="flowers" aria-hidden="true">
+        🌷 🌸 🌺 🌹 🌻 💐
+    </div>
+
+    <footer class="footer">
+        Gửi những điều tốt đẹp nhất đến các bạn nữ 10A9 💗
+        <br>
+        Made with love by Gia Bảo
+    </footer>
+
+    <script>
+        /* =========================
+           HIỆU ỨNG TRÁI TIM BAY
+        ========================= */
+        (() => {
+            const reducedMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            );
+
+            if (reducedMotion.matches) return;
+
+            const symbols = ["💗", "💕", "🌸", "✨", "🌷"];
+            const maxParticles = 15;
+            let particleCount = 0;
+
+            function createParticle() {
+                if (particleCount >= maxParticles) return;
+
+                const particle = document.createElement("span");
+                particle.className = "particle";
+                particle.textContent =
+                    symbols[Math.floor(Math.random() * symbols.length)];
+
+                particle.style.left = Math.random() * 100 + "vw";
+                particle.style.fontSize =
+                    (14 + Math.random() * 12) + "px";
+
+                const duration = 8 + Math.random() * 7;
+                particle.style.animationDuration = duration + "s";
+
+                document.body.appendChild(particle);
+                particleCount++;
+
+                particle.addEventListener("animationend", () => {
+                    particle.remove();
+                    particleCount--;
+                }, { once: true });
+            }
+
+            // Tạo các biểu tượng trang trí theo chu kỳ.
+            const intervalId = window.setInterval(() => {
+                if (document.hidden) return;
+                createParticle();
+            }, 1100);
+
+            // Dọn dẹp hiệu ứng nếu trang được tải lại hoặc đóng.
+            window.addEventListener("pagehide", () => {
+                window.clearInterval(intervalId);
+            }, { once: true });
+        })();
+    </script>
+</body>
+</html>
+```
